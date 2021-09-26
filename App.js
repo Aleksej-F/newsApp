@@ -4,8 +4,8 @@ import { StyleSheet, Text, View} from 'react-native';
 import { gStyle} from './styles/style';
 import * as Font from 'expo-font';
 import  AppLoading from 'expo-app-loading';
-import Contacts from './components/Contacts';
-import Main from './components/Main';
+
+import MainStack from './navigate';
 
 const fonts = () => Font.loadAsync({
 	// Можете подключить сколько-угодно шрифтов
@@ -18,7 +18,7 @@ export default function App() {
   
   if (font) {
     return (
-      <Main></Main>
+      <MainStack></MainStack>
     );
   } else {
     return (
