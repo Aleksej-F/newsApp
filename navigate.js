@@ -18,7 +18,7 @@ export default function Navigate() {
              <Stack.Screen
                 name="FullInfo"
                 component={FullInfo}
-                options={{title: 'Контакты'}}
+                options={{title: 'Статья'}}
             />
         </Stack.Navigator>
     </NavigationContainer>

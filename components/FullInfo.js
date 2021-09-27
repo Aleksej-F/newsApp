@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View  } from 'react-native';
+import { StyleSheet, Text, Button, View , Image } from 'react-native';
 import { gStyle } from '../styles/style'
 
 export default function FullInfo( {route}) {
@@ -7,13 +7,29 @@ export default function FullInfo( {route}) {
   //  navigation.goBack();
   //}
   return (
-    <View style={gStyle.main}>
+    <View style={[gStyle.main, styles.header]}>
+      <Image source={{
+                        width: '100%',
+                        height: 200,
+                        uri: route.params.img
+                    }} />
      <Text style={gStyle.title}>{route.params.name}</Text>
-     <Text >{route.params.full}</Text>
+     <Text style={styles.full}>{route.params.full}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
- 
+  header: {
+    fontSize: 25,
+    marginTop: 25,
+    
+},
+  full:{
+  fontFamily: 'my-light',
+  fontSize: 16,
+  textAlign:'center',
+  marginTop: 20,
+  color: '#f55151'
+ }
 });
