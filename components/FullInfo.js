@@ -8,13 +8,9 @@ export default function FullInfo( {route}) {
   //}
   return (
     <View style={[gStyle.main, styles.header]}>
-      <Image source={{
-                        width: '100%',
-                        height: 200,
-                        uri: route.params.img
-                    }} />
-     <Text style={gStyle.title}>{route.params.name}</Text>
-     <Text style={styles.full}>{route.params.full}</Text>
+      <Image style={styles.image} source={{uri: route.params.img}} />
+      <Text style={gStyle.title}>{route.params.name}</Text>
+      <Text style={styles.full}>{route.params.full}</Text>
     </View>
   );
 }
@@ -31,5 +27,9 @@ const styles = StyleSheet.create({
   textAlign:'center',
   marginTop: 20,
   color: '#f55151'
+ },
+ image:{
+  width: '100%',
+  height: 200,
  }
 });

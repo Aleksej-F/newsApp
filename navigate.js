@@ -13,7 +13,11 @@ export default function Navigate() {
             <Stack.Screen
                 name="Main"
                 component={Main}
-                options={{title: 'Главная'}}
+                options={{
+                    title: 'Главная',
+                    headerStyle: { backgroundColor: '#eb5d3d', height: 100},
+                    headerBackTitleStyle: { fontWeight: '400'}
+                }}
             />
              <Stack.Screen
                 name="FullInfo"
